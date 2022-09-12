@@ -30,7 +30,7 @@ class Response:
             return None
 
         if self._text is None:
-            self._text = json.dumps(self._data)
+            self._text = json.dumps(self._data, ensure_ascii=False)
 
         return self._text
 
